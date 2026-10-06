@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+#hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/menu.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+ul{
+    background-color: rgba(46, 139, 87,0.9);
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    position: relative;
+}
+li{
+    list-style: none;
+}
+a{
+    float: left;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+}
+a:hover{
+    background-color: darkseagreen;
+    color: green;
+}
+button{
+    padding: 1rem 2rem;
+    background: transparent;
+    outline: none;
+    border: 2px solid lightblue;
+    border-radius: 20px;
+    color: lightblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+.container{
+    width: 50%;
+    height: 100vh;
+    background: rgba(86,86,86,0.3);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+a.active{
+    color: yellow;
+}
+.info{
+    width: 550px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.info h1{
+    font-size: xx-large;
+}
+.info p{
+    color: aliceblue;
+    margin: 20px 0;
+    
+}
+.info input{
+    font-size: small;
+    width: 50%;
+    padding: 8px 10px;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background: transparent;
+    color: #fff;
+}
+::placeholder{
+    color: #ccc;
+    padding-left: 20px;
+}
+@media screen and (max-width: 1100px) {
+
+    .container {
+        width: 100%; /* Adjust width for smaller screens */
+        height: 100%; /* Remove fixed height */
+    }
+    .info{
+        width: 90%;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+    a{
+        padding: 1rem 1rem;
+    }
+}
+.strokeme {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  .zerg{
+    height: 1000px;
+  }
+img.leaf1{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: 100;
+    animation: fall1 3s forwards linear;
+}
+img.leaf2{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: 100;
+    animation: fall2 3s forwards linear;
+}
+img.leaf3{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    z-index: 100;
+    animation: fall3 3s forwards linear;
+}
+@keyframes fall1{
+    50%{
+        top: 50%;
+        left: 20%;
+    }
+100%{
+    top:80%;
+    left: 30%;
+    opacity: 0;
+    transform: rotate(90deg);
+}
+}
+@keyframes fall2 {
+    50% {
+        top: 40%;
+        left: 40%;
+    }
+    100% {
+        top: 80%;
+        left: 50%;
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+}
+
+/* Animation for leaf3 */
+@keyframes fall3 {
+    50% {
+        top: 60%;
+        left: 55%;
+    }
+    100% {
+        top: 80%;
+        left: 75%;
+        opacity: 0;
+        transform: rotate(270deg);
+    }
+}
